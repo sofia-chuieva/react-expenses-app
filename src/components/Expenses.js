@@ -5,11 +5,13 @@ import "../style/Expenses.css";
 
 const Expenses = ({ expenses }) => {
   return (
-    <Card className="expenses">
-      {expenses.map((i) => (
-        <ExpenseItem data={i} key={i.id} />
-      ))}
-    </Card>
+    <div>
+      <Card className="expenses">
+        {expenses.map((i) => (
+          <ExpenseItem data={i} key={i.id} />
+        ))}
+      </Card>
+    </div>
   );
 };
 
