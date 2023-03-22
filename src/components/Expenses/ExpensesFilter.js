@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../style/ExpensesFilter.css";
+import "../../style/ExpensesFilter.css";
 
 const ExpensesFilter = ({ onChangeFilter, selectedValue }) => {
   const dropDownChange = (e) => {

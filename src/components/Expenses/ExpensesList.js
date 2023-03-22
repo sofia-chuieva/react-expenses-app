@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/ExpensesList.css";
+import "../../style/ExpensesList.css";
 import ExpenseItem from "./ExpenseItem";
 
 const ExpensesList = ({ items }) => {
