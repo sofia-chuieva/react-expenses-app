@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NewExpense.css";
 import Form from "./Form";
 
@@ -10,11 +10,29 @@ const NewExpense = ({ onAddExpense }) => {
       id: Math.random().toString(),
     };
     onAddExpense(expenseDate);
+    setClicked(false);
+  };
+
+  const [clicked, setClicked] = useState(false);
+
+  const handleClicked = () => {
+    setClicked(true);
+  };
+
+  const handleClose = () => {
+    setClicked(false);
   };
 
   return (
     <div className="new-expense">
-      <Form onSaveExpenseData={saveExpenseDataHandler} />
+      {clicked ? (
+        <Form
+          onClose={handleClose}
+          onSaveExpenseData={saveExpenseDataHandler}
+        />
+      ) : (
+        <button onClick={handleClicked}>Add new Expense</button>
+      )}
     </div>
   );
 };

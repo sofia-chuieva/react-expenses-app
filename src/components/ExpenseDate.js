@@ -5,7 +5,6 @@ const ExprenseDate = ({ info }) => {
   const month = info.toLocaleString("en-US", { month: "long" });
   const day = info.toLocaleString("en-US", { day: "2-digit" });
   const year = info.getFullYear();
-
   return (
     <div className="expense-date">
       <div className="expense-date__month">{month}</div>
