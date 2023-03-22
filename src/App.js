@@ -13,7 +13,7 @@ const INITIAL_EXPENSES = [
     id: "e2",
     title: "Car insurance",
     amount: 786.5,
-    date: new Date(2023, 4, 21),
+    date: new Date(2021, 4, 21),
   },
   { id: "e3", title: "Books", amount: 45, date: new Date(2022, 9, 16) },
   {
@@ -28,7 +28,7 @@ function App() {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
 
   const addExpenseData = (expense) => {
-    setExpenses([expense, ...expenses]);
+    setExpenses((prev) => [expense, ...prev]);
   };
 
   return (

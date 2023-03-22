@@ -11,7 +11,6 @@ const ExpenseItem = ({ data }) => {
         <h2>{data.title}</h2>
         <div className="expense-item__price">${data.amount}</div>
       </div>
-      <button onClick={() => console.log("click")}>Change Title</button>
     </Card>
   );
 };
